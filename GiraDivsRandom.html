@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>JS</title>
+        <script>
+            function criaDivs() {
+                var divCriada = document.createElement('div');
+                divCriada.style.height = "20px";
+                divCriada.style.width = "20px";
+                
+                var cores = ['aqua', 'black', 'brown', 'gold', 'grey', 'red', 'yellow', 'green', 'blue', 'magenta', 'tomato', 'orange', 'olive', 'navy'];
+                var numeroCorFundo = Math.floor(Math.random() * 14);
+                var numeroCorBorda = Math.floor(Math.random() * 14);
+                var corFundo = cores[numeroCorFundo];
+                var borda = cores[numeroCorBorda];
+                divCriada.style.backgroundColor = corFundo;
+                divCriada.style.borderColor = borda;
+                divCriada.style.borderWidth = '2px'; 
+                divCriada.style.borderStyle = 'solid';
+                document.body.appendChild(divCriada);
+            }
+            
+            
+            
+        </script>
+    </head>
+    <body>
+        <button onclick="criaDivs()">Clique</button>
+    </body>
+</html>
